@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./static/style.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Phi$her$</h1>
+       
+        <h2>A site that predicts phishing!</h2>
+    </header>
+
+  <main>
+    <article>
+      <div class="form-container">
+        <form class="form" action='/predict' method="post">
+          <div class="form-control"><button class="button">
+              <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-labelledby="search">
+                <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                  stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+            <input id="url" name="z1" type="text" class="input" placeholder="Enter url..." required>
+          </div>
+          <button class="btn" type="Summarize">Predict</button>
+        </form>
+      </div>
+
+      <div id='result'>
+        {{ prediction_text }}
+      </div>
+    </article>
+  </main>
+
+</body>
+
+</html>
